@@ -1,0 +1,123 @@
+html {
+  font-family: "Roboto", serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: aliceblue;
+}
+
+.bot {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #5350c4;
+  fill: #fff;
+  border-radius: 50%;
+  padding: 7px;
+  cursor: pointer;
+}
+.chatbot-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  width: 400px;
+  background-color: #fff;
+  overflow: hidden;
+  &.open {
+    display: block;
+  }
+}
+.chat-header {
+  padding: 8px;
+  background-color: #5350c4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.chat-header .header-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-header .header-info .CBtn {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 32px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.chat-body {
+  padding: 0 15px;
+  display: flex;
+  gap: 10px;
+  flex-flow: column;
+  overflow-y: scroll;
+  position: relative;
+  height: 500px;
+}
+.chat-body::-webkit-scrollbar {
+  width: 0;
+}
+.bot-message {
+  color: #fff;
+  background-color: #5350c4;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-size: 18px;
+  text-transform: capitalize;
+  align-self: flex-start;
+}
+
+.user-message {
+  color: #000;
+  background-color: #c4c4c4;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  font-size: 18px;
+  text-transform: capitalize;
+  align-self: end;
+}
+.message {
+  padding: 10px;
+  margin-top: 15px;
+  width: fit-content;
+  line-height: 1.5;
+}
+
+.svg-head {
+  fill: #fff;
+}
+
+.chat-input {
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid #e9e9e9;
+}
+.chat-input .emoji-input,
+.img-input,
+.sendBtn {
+  color: #5350c4;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.chat-input .user-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 20px;
+}
